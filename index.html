@@ -9,9 +9,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1592656094267-764a45160876?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; }
+        <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+  body { 
+    font-family: 'Inter', sans-serif; 
+    margin: 0; /* Removes default browser padding */
+  }
+
+  .hero-gradient { 
+    /* 1. The Gradient + Image */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1592656094267-764a45160876?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+    
+    /* 2. Positioning and Sizing */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    /* 3. Essential for Hero sections */
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+</style>
     </style>
 </head>
 <body class="bg-gray-50">
@@ -35,7 +58,7 @@
     <header class="hero-gradient h-[600px] flex items-center justify-center text-center text-white px-4">
         <div class="max-w-4xl">
             <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 leading-tight">Giving the Game <br><span class="text-red-500">A Brighter Future</span></h1>
-            <p class="text-xl md:text-2xl mb-8 font-light italic">Supporting athletes, coaches, and communities across the nation.</p>
+            <p class="text-xl md:text-2xl mb-8 font-light italic">Supporting Volleyball, coaches, and communities across Kenya.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#" class="bg-white text-blue-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition">Our Mission</a>
                 <a href="#" class="bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition">Ways to Give</a>
@@ -46,15 +69,15 @@
     <div class="bg-blue-900 py-10 text-white">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-                <p class="text-4xl font-black">$2M+</p>
-                <p class="uppercase tracking-widest text-sm opacity-80">Grants Awarded</p>
+                <p class="text-4xl font-black">$1M+</p>
+                <p class="uppercase tracking-widest text-sm opacity-80">Scholarships Awarded</p>
             </div>
             <div>
-                <p class="text-4xl font-black">50,000</p>
-                <p class="uppercase tracking-widest text-sm opacity-80">Athletes Reached</p>
+                <p class="text-4xl font-black">1000+</p>
+                <p class="uppercase tracking-widest text-sm opacity-80">Volleyball Players Reached</p>
             </div>
             <div>
-                <p class="text-4xl font-black">500+</p>
+                <p class="text-4xl font-black">50+</p>
                 <p class="uppercase tracking-widest text-sm opacity-80">Clubs Supported</p>
             </div>
         </div>
@@ -73,7 +96,7 @@
                 </div>
                 <div class="p-8">
                     <h3 class="text-2xl font-bold text-blue-900 mb-3 uppercase">National Team Support</h3>
-                    <p class="text-gray-600 mb-6">Helping our elite athletes compete on the world stage with world-class resources.</p>
+                    <p class="text-gray-600 mb-6">Helping our Volleyball players compete on the world stage with world-class resources.</p>
                     <a href="#" class="text-red-600 font-bold hover:underline">LEARN MORE →</a>
                 </div>
             </div>
@@ -106,7 +129,7 @@
         <div class="max-w-5xl mx-auto bg-blue-900 rounded-3xl p-12 text-center text-white relative overflow-hidden">
             <div class="relative z-10">
                 <h2 class="text-4xl font-black mb-6 uppercase">Ready to make a difference?</h2>
-                <p class="text-xl mb-10 opacity-90">Your 100% tax-deductible gift goes directly to the programs that need it most.</p>
+                <p class="text-xl mb-10 opacity-90">Your 100% funding goes directly to the programs that need it most.</p>
                 <button class="bg-red-600 hover:bg-red-700 text-white px-12 py-5 rounded-full font-black text-xl transition transform hover:scale-105">DONATE NOW</button>
             </div>
         </div>
@@ -136,10 +159,11 @@
             </div>
         </div>
         <div class="text-center text-gray-400 text-sm border-t border-gray-100 pt-8">
-            © 2026 Volleyball Foundation. All Rights Reserved. Not affiliated with USA Volleyball.
+            © 2026 Volleyball Foundation. All Rights Reserved.
         </div>
     </footer>
 
 </body>
 </html>
+
 
