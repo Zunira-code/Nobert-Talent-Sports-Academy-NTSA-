@@ -8,28 +8,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             scroll-behavior: smooth;
         }
+
         .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                        url('https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=1920&q=80');
+            /* Fixed background shorthand for better browser compatibility */
+            background: linear-gradient(rgba(0, 26, 51, 0.7), rgba(0, 26, 51, 0.7)), 
+                        url('https://images.unsplash.com/photo-1612872087726-bb876a2e204d?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
             background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
         }
+
+        /* Smooth hover for the navigation */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -39,15 +44,14 @@
                     </span>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-gray-700 hover:text-blue-900 font-semibold">About Us</a>
-                    <a href="#programs" class="text-gray-700 hover:text-blue-900 font-semibold">Programs</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-900 font-semibold nav-link">About Us</a>
+                    <a href="#programs" class="text-gray-700 hover:text-blue-900 font-semibold nav-link">Programs</a>
                     <a href="#" class="bg-red-600 text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition duration-300">DONATE</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <header class="hero-gradient text-center px-4">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 leading-tight">
@@ -67,7 +71,6 @@
         </div>
     </header>
 
-    <!-- Stats -->
     <div class="bg-blue-900 py-12 text-white">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
@@ -85,14 +88,13 @@
         </div>
     </div>
 
-    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1612872087726-bb876a2e204d?auto=format&fit=crop&w=1200&q=80"
+                    <img src="https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=1200&auto=format&fit=crop"
                          alt="Volleyball team in strategy huddle"
-                         class="rounded-2xl shadow-2xl w-full h-auto">
+                         class="rounded-2xl shadow-2xl w-full h-[400px] object-cover">
                 </div>
                 <div>
                     <h2 class="text-4xl font-black text-blue-900 uppercase mb-6">About NTSA</h2>
@@ -115,7 +117,6 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
     <section id="programs" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -125,8 +126,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition">
                     <div class="h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?auto=format&fit=crop&w=1200&q=80"
-                             alt="Elite volleyball players in national team training"
+                        <img src="https://images.unsplash.com/photo-1547347691-3d4ae5893960?q=80&w=1200&auto=format&fit=crop"
+                             alt="National Team Support"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
@@ -138,8 +139,8 @@
 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition">
                     <div class="h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-                             alt="Young volleyball players during youth training session"
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop"
+                             alt="Youth Development"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
@@ -151,8 +152,8 @@
 
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition">
                     <div class="h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1624880357917-835b220bf481?auto=format&fit=crop&w=1200&q=80"
-                             alt="Volleyball coach instructing players on technique"
+                        <img src="https://images.unsplash.com/photo-1461896756961-0428399589d3?q=80&w=1200&auto=format&fit=crop"
+                             alt="Coaching Grants"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
@@ -165,7 +166,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-blue-900 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div class="col-span-1 md:col-span-2">
