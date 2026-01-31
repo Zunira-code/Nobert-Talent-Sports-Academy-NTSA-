@@ -5,59 +5,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nobert Talent & Sports Academy</title>
+    <title>NTSA Academy | Empowering the Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         
+        /* Hero background using a reliable CSS gradient since external images are failing you */
         .hero-gradient {
-            /* This points to your local image folder */
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                        url('images/hero.jpg'); 
-            background-size: cover;
-            background-position: center;
-            min-height: 85vh;
+            background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::after {
+            content: "🏐";
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            right: -5%;
+            bottom: -5%;
         }
     </style>
 </head>
 <body class="bg-gray-50">
 
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <span class="text-xl md:text-2xl font-black text-blue-900 uppercase">
+                Nobert Talent & Sports<span class="text-red-600"> Academy</span>
+            </span>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#programs" class="text-gray-700 hover:text-blue-900 font-semibold">Programs</a>
+                <a href="#" class="bg-red-600 text-white px-6 py-2 rounded-full font-bold hover:bg-red-700">DONATE</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="hero-gradient text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-black uppercase">Giving the Game <span class="text-red-500">A Brighter Future</span></h1>
+        <div class="z-10">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-6">
+                Giving the Game <br><span class="text-red-500">A Brighter Future</span>
+            </h1>
+            <p class="text-xl mb-8 italic">Developing Elite Volleyball Talent Across Kenya.</p>
+            <a href="#programs" class="bg-red-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-red-700">View Programs</a>
+        </div>
     </header>
 
-    <section id="programs" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
-            
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="images/national-team.jpg" alt="National Team" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-blue-900">National Team Support</h3>
-                </div>
+    <section id="programs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-blue-900 uppercase">Core Programs</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto mt-4"></div>
             </div>
 
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="images/youth.jpg" alt="Youth Development" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-blue-900">Youth Development</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border-b-4 border-blue-900">
+                    <img src="https://placehold.co/600x400/001a33/white?text=National+Team+Support" 
+                         alt="Volleyball" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3 uppercase">National Team Support</h3>
+                        <p class="text-gray-600 mb-6">Preparing elite athletes for the FIVB World Stage and professional competitions.</p>
+                        <span class="text-red-600 font-bold">VOLLEYBALL ELITE →</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                <img src="images/coaching.jpg" alt="Coaching Grants" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-blue-900">Coaching Grants</h3>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border-b-4 border-red-600">
+                    <img src="https://placehold.co/600x400/cc0000/white?text=Youth+Development" 
+                         alt="Volleyball" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3 uppercase">Youth Development</h3>
+                        <p class="text-gray-600 mb-6">Removing financial barriers for talented children to access the sport.</p>
+                        <span class="text-red-600 font-bold">GRASSROOTS →</span>
+                    </div>
                 </div>
-            </div>
 
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border-b-4 border-blue-900">
+                    <img src="https://placehold.co/600x400/001a33/white?text=Coaching+Grants" 
+                         alt="Volleyball" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-3 uppercase">Coaching Grants</h3>
+                        <p class="text-gray-600 mb-6">Funding certifications to bring world-class standards to local Kenyan clubs.</p>
+                        <span class="text-red-600 font-bold">TECHNICAL TRAINING →</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <footer class="bg-blue-900 text-white py-12 text-center">
+        <p class="font-black uppercase tracking-widest">NTSA Academy © 2026</p>
+        <p class="text-gray-400 text-sm mt-2">Empowering Kenyan Volleyball Excellence</p>
+    </footer>
 
 </body>
 </html>
